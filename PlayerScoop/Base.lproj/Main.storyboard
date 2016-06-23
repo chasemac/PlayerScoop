@@ -3,6 +3,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--Split View Controller-->
@@ -29,7 +30,26 @@
                     <view key="view" contentMode="scaleToFill" id="TnV-gh-M4G">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" red="0.61978822950000001" green="0.87892442940000004" blue="1" alpha="1" colorSpace="deviceRGB"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="9UW-rq-Ush">
+                                <rect key="frame" x="20" y="20" width="560" height="580"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </tableView>
+                        </subviews>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="9UW-rq-Ush" secondAttribute="trailing" id="APM-gJ-4rT"/>
+                            <constraint firstItem="y2k-lG-s54" firstAttribute="top" secondItem="9UW-rq-Ush" secondAttribute="bottom" id="gtf-YL-jSm"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="9UW-rq-Ush" secondAttribute="trailing" id="pEM-62-Su4"/>
+                            <constraint firstItem="9UW-rq-Ush" firstAttribute="leading" secondItem="TnV-gh-M4G" secondAttribute="leading" id="ths-N2-9Jf"/>
+                            <constraint firstItem="9UW-rq-Ush" firstAttribute="top" secondItem="7lR-pY-IRq" secondAttribute="bottom" id="xgu-TT-Rkv"/>
+                            <constraint firstItem="9UW-rq-Ush" firstAttribute="leading" secondItem="TnV-gh-M4G" secondAttribute="leadingMargin" id="zTA-4Q-0fT"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="pEM-62-Su4"/>
+                                <exclude reference="zTA-4Q-0fT"/>
+                            </mask>
+                        </variation>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="tgI-sL-uvy" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -47,7 +67,6 @@
                     <view key="view" contentMode="scaleToFill" id="Cjq-Yv-JB0">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" red="1" green="0.43529412150000002" blue="0.81176471709999998" alpha="1" colorSpace="calibratedRGB"/>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="MkT-XU-dOx" userLabel="First Responder" sceneMemberID="firstResponder"/>
