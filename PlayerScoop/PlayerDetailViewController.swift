@@ -41,6 +41,11 @@ class PlayerDetailViewController: UIViewController {
         self.collegeLabel2.textColor = self.player.textColor2
         self.collegeLabel2.text = self.player.college
         
+        //making image round
+        
+        self.imageView.layer.cornerRadius = self.imageView.frame.size.width / 2;
+        self.imageView.clipsToBounds = true
+        
     }
 
 
